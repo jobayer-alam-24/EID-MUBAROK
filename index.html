@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Mubarak Card</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            font-family: 'Poppins', sans-serif;
+        }
+        .card {
+            width: 350px;
+            background: white;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            padding: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+            position: relative;
+        }
+        .card:hover {
+            transform: scale(1.07);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        .card img {
+            width: 100%;
+            border-radius: 15px;
+        }
+        .card h2 {
+            color: #d35400;
+            font-size: 26px;
+            margin: 15px 0;
+        }
+        .message {
+            display: none;
+            color: #444;
+            font-size: 18px;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .btn {
+            background: #d35400;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        .btn:hover {
+            background: #c0392b;
+        }
+        .crescent {
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 120px;
+            height: 120px;
+            background: gold;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 223, 0, 0.8);
+        }
+        .crescent::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="crescent"></div>
+        <img src="kaba.jpeg" alt="Eid Mubarak" width="200" height="200">
+        <h2>Eid Mubarak!</h2>
+        <p class="message">May this Eid bring you peace, happiness, and prosperity. Enjoy the festivities!</p>
+        <button class="btn">Show Message</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".btn").click(function(){
+                $(".message").fadeIn(500);
+            });
+        });
+    </script>
+</body>
+</html>
